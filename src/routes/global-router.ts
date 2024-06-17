@@ -1,10 +1,10 @@
-import { Router } from 'express'
-import authRouter from './auth/auth-router'
-// other routers can be imported here
+import { Router } from 'express';
+import authRouter from './auth/auth-router';
+import songRouter from './song/song-router';
 
-const globalRouter = Router()
+const globalRouter = Router();
 
-globalRouter.use('/auth', authRouter)
-// other routers can be added here
+globalRouter.use('/auth', authRouter);
+globalRouter.use('/songs', songRouter); 
 
-export default globalRouter
+export default globalRouter;
